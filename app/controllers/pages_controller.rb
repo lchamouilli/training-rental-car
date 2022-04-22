@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def dashboard
+    if current_user
+      @bookings = Booking.all
+    end
+  end
 end
