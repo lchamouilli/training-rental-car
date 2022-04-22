@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Mon tableau de bord</h1>
+  <h2>Mes réservations</h2>
+  <div>
+    <% @bookings.each do |booking| %>
+      <h4><%= booking.car.brand %></h4>
+      <h4><%= booking.car.model %></h4>
+      <%= image_tag booking.car.photo_url, width: 400 %>
+      <p>Début de la réservation : <%= booking.start_date%></p>
+      <p>Fin de la réservation : <%= booking.end_date%></p>
+      <p>Nombre de jours : <%= (booking.end_date - booking.start_date).to_i %></p>
+      <p>Prix total : <%= booking.total_price %> €</p>
+      <%= link_to 'Annuler', booking_path(booking), method: :delete, class: 'btn btn-danger' %>
+    <% end %>
+  </div>
+
+</div>
