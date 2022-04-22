@@ -3,6 +3,5 @@
 <%= image_tag car.photo_url, width: 400 %>
 <h2><%= car.brand %></h2>
 <h3><%= car.model %></h3>
-<p><%= car.description %></p>
-<p><%= car.price_per_day %> € par jour</p>
+<p><%= link_to 'Détails', car_path(car), class: "btn btn-primary" %></p>
 <% end %>
