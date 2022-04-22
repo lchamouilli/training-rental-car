@@ -1,0 +1,13 @@
+<h1><%= @car.brand %></h1>
+<h2><%= @car.model %></h2>
+<%= image_tag @car.photo_url, width: 400 %>
+<p><%= @car.description %></p>
+<p><%= @car.price_per_day %> € par jour</p>
+
+
+<h2>Réservation</h2>
+<%= simple_form_for [@car, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
