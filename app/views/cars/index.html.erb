@@ -1,7 +1,16 @@
-<h1>Notre sélection de voitures</h1>
-<% @cars.each do |car| %>
-<%= image_tag car.photo_url, width: 400 %>
-<h2><%= car.brand %></h2>
-<h3><%= car.model %></h3>
-<p><%= link_to 'Détails', car_path(car), class: "btn btn-primary" %></p>
-<% end %>
+<div class="container">
+  <h1>Notre sélection de voitures</h1>
+  <div class="cards-cars">
+    <% @cars.each do |car| %>
+      <div class="card-car">
+        <%= image_tag car.photo_url, class: "card-img-car" %>
+        <div class="card-car-body">
+          <h5 class="card-car-title"><%= car.brand %> <%= car.model %></h5>
+          <p class="card-car-text"><%= car.description %></p>
+          <p class="card-car-text"><%= car.price_per_day %> € par jour</p>
+          <%= link_to 'Détails', car_path(car), class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
