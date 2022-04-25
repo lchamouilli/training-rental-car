@@ -28,7 +28,7 @@ Rails.application.configure do
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
-  #Google Analytics Mesure ID
+  # Google Analytics Mesure ID
   GA.tracker = "G-SLWB7WNDBW"
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
