@@ -34,6 +34,10 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'country_select'
+
+#Use Google Analytics
+gem 'google-analytics-rails'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
