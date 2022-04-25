@@ -10,7 +10,6 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLWB7WNDBW"></script>
     <script>
@@ -21,11 +20,11 @@
     gtag('config', 'G-SLWB7WNDBW');
     </script>
   </head>
-
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
   </body>
+  <%= render 'shared/footer' %>
 </html>
